@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request
-from typing import cast
-from urllib3 import HTTPResponse
 import requests
 
 app = Flask(__name__)
@@ -32,4 +30,4 @@ def get_stock_price(symbol, api_key):
     return None
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)  # Set debug mode to False
